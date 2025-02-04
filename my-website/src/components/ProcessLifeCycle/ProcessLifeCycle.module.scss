@@ -1,0 +1,53 @@
+// components/ProcessLifeCycle/ProcessLifeCycle.module.scss
+.process {
+    padding: 4rem 0;
+  
+    h2, h3 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+  
+      &Item {
+        text-align: center;
+        padding: 2rem;
+        border: 1px solid #eee;
+        border-radius: 8px;
+  
+        .number {
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+          color: #666;
+        }
+      }
+    }
+  
+    .servicesTable {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid #eee;
+  
+      .row {
+        display: contents;
+        
+        > div {
+          padding: 1rem;
+          border-bottom: 1px solid #eee;
+          &:not(:last-child) {
+            border-right: 1px solid #eee;
+          }
+        }
+  
+        &:first-child > div {
+          font-weight: bold;
+          background: #f8f8f8;
+        }
+      }
+    }
+  } 
