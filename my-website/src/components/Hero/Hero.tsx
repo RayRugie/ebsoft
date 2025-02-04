@@ -53,12 +53,14 @@ export const Hero = () => (
           <img src={Globe} alt="" className={styles.rotateGlobe}/>
         </div>
         {/* right side */}
-        <div className="rightSide">
-          <div className={styles.gridItem}>
-            <span className={styles.smallLabel}>TELL US <br /> about the project</span>
+        <div className={styles.rightSide}>
+          <div className={styles.rightTextBreak}>
+            <p>TELL US </p>
+            <p> about the project</p>
+            {/* <span className={styles.smallLabel}><br /></span> */}
           </div>
 
-          <div className={styles.gridItem}>
+          <div className={styles.rightTextBreak2}>
             <div className={styles.dualText}>
               <span className={styles.mediumText}></span>
               <span className={styles.mediumText}>HOW <br/>we think</span>
