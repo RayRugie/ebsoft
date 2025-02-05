@@ -1,7 +1,9 @@
 // components/Hero/Hero.tsx
 import styles from './Hero.module.scss';
 import Logo from "../../assets/logo.svg";
-import Globe from "../../assets/globe-PHlLSXNydQ.svg";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
+
 // import Divider from "../../assets/div.herocircle__waves-wrapper.svg"
 
 export const Hero = () => (
@@ -36,12 +38,12 @@ export const Hero = () => (
         {/* left side */}
         <div className={styles.leftSide }>
           
-            <div className={styles.textBreak1}>
+            <div className={styles.leftTextBreak}>
               <p className={styles.firstPart}>WHO</p>
               <p className={styles.secondPart}>we are</p>
             </div>
          
-            <div className={styles.textBreak2}>
+            <div className={styles.leftTextBreak2}>
               <p className={styles.firstPart}>WHAT</p>
               <p className={styles.secondPart}>we do</p>
             </div>
@@ -50,7 +52,11 @@ export const Hero = () => (
         </div>
         {/* center item  */}
         <div className={styles.centerItem}>
-          <img src={Globe} alt="" className={styles.rotateGlobe}/>
+        <DotLottieReact
+      src="https://lottie.host/bf473de3-4a73-41c6-bdc2-51458ff06664/et7mwkip8J.lottie"
+      loop
+      autoplay
+    />
         </div>
         {/* right side */}
         <div className={styles.rightSide}>
@@ -69,12 +75,12 @@ export const Hero = () => (
         </div>
 
       </div>
+        <button className={styles.hiringButton}>
+          We are hiring
+        </button>
 
-      <button className={styles.hiringButton}>
-        We are hiring
-      </button>
     </div>
-    <div className="wave"></div>
+    {/* <div className="wave"></div> */}
 
   </section>
 );

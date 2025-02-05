@@ -10,6 +10,7 @@
             margin-left: calc(-50vw + 50%); // Center align hack for full-width elements
             overflow: hidden; // Prevent horizontal scroll  
             color: white;
+            font-family: "Inter", serif;
 
   clip-path: path("M0,0 L100%,0 L100%,80 Q75%,100 50%,80 Q25%,60 0,80 Z");
               &::before,
@@ -37,8 +38,58 @@
 
 
             .content {
-                max-width: 1200px;
+                max-width: 100%;
                 margin: 0 auto;
+                position: relative;
+                background: transparent;
+            }
+            .content:before {
+                content: "";
+                height: 125px;
+                width: 100%;
+                background: url(https://raw.githack.com/SochavaAG/example-mycode/master/pens/animation-wave-shadow/images/wave.svg) repeat-x scroll 0 0;
+                -webkit-background-size: 1600px 198px;
+                -moz-background-size: 1600px 198px;
+                -o-background-size: 1600px 198px;
+                background-size: 1600px 198px;
+              
+                position: absolute;
+                left: 0;
+                bottom: 0;
+              
+                -webkit-filter: drop-shadow(5px -10px 3px rgba(0, 0, 0, .2));
+                -webkit-filter: drop-shadow(5px -10px 3px rgba(4, 228, 90, 0.2));
+                filter: drop-shadow(5px -10px 3px rgba(0, 0, 0, .2));
+                filter: drop-shadow(5px -10px 3px rgba(4, 228, 90, 0.2));
+              
+                -webkit-animation: an-wave 20s linear infinite;
+                -moz-animation: an-wave 20s linear infinite;
+                -o-animation: an-wave 20s linear infinite;
+                animation: an-wave 20s linear infinite;
+            }
+            .svg-img-block {
+                display: none;
+            }
+            
+            @-webkit-keyframes an-wave {
+                100% {
+                background-position-x: -1600px;
+                }
+            }
+            @-moz-keyframes an-wave {
+                100% {
+                background-position-x: -1600px;
+                }
+            }
+            @-o-keyframes an-wave {
+                100% {
+                background-position-x: -1600px;
+                }
+            }
+            @keyframes an-wave {
+                100% {
+                background-position-x: -1600px;
+                }
             }
 
             .logoHead {
@@ -133,7 +184,7 @@
                 display: flex;
                 justify-content: center;
                 width: 100%;
-overflow: hidden;
+                overflow: hidden;
                 position: relative;
                 // grid-template-columns: repeat(3, 1fr);
                 // gap: 0.2rem;
@@ -148,56 +199,50 @@ overflow: hidden;
                     // grid-column: 1;
                     font-size: 1.5rem;
 
-                    .textBreak1 {
+                    .leftTextBreak {
                         // margin-bottom: 20%;
                         position: absolute;
                         top: 20%;
                         left:20%;
-
-                        .firstPart {
-
-                            // margin-right: 10%;
-                        }
-
+                        
+                        // .firstPart {
+                            
+                        //     // margin-right: 10%;
+                        // }
+                        
                         .secondPart {
                             padding-left: 3rem;
                         }
                     }
+                    
+                    .leftTextBreak:hover {
+                        color: #2D975A;
+                    }
 
-                    .textBreak2 {
+                    .leftTextBreak2 {
                         position: absolute;
                         bottom: 20%;left:20%;
                         // margin-top: 5%;
                         font-size: 1.2rem;
 
-                        .firstPart {
-                            // margin-right: 5%;
+                        
+                        // .firstPart {
+                        //     // margin-right: 5%;
 
-                        }
-
+                        // }
                         .secondPart {
                             padding-left: 3rem;
                         }
+                    }
+                    .leftTextBreak2:hover {
+                        color: #2D975A;
                     }
                 }
 
                 .centerItem {
                     // grid-column: 2;
                     margin-top: 0;
-
-                    // @keyframes rotate {
-                    //     from {
-                    //     transform: rotate(0deg);
-                    //     }
-                    //     to {
-                    //     transform: rotate(360deg);
-                    //     }
-                    // }
-                    // .rotateGlobe {
-                    //     // width: 100px; // Adjust as needed
-                    //     // height: 100px;
-                    //     animation: rotate 60s linear infinite; // Adjust duration as needed
-                    // }
+                    height: 350px;
                 }
 
                 .rightSide {
@@ -211,6 +256,10 @@ overflow: hidden;
                         p:nth-child(1) {
                             padding-left: 7rem;
                         }
+
+                    }
+                    .rightTextBreak:hover {
+                        color: #2D975A;
                     }
 
                     .rightTextBreak2 {
@@ -220,6 +269,9 @@ overflow: hidden;
                         span:nth-child(1) {
                             padding-left: 5rem;
                         }
+                    }
+                    .rightTextBreak2:hover {
+                        color: #2D975A;
                     }
                 }
 
@@ -258,6 +310,7 @@ overflow: hidden;
                 cursor: pointer;
                 color: white;
                 transition: all 0.3s ease;
+               
 
 
                 &:hover {
@@ -265,38 +318,7 @@ overflow: hidden;
                     color: white;
                 }
 
-                .wave {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 40px;
-                    background: rgb(0, 0, 0);
-                    transform: scale(1, 1);
-
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        border-radius: 100%;
-                        width: 100%;
-                        height: 300px;
-                        background-color: white;
-                        right: -25%;
-                        top: 20px;
-                    }
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        border-radius: 100%;
-                        width: 100%;
-                        height: 300px;
-                        background-color: rgb(57, 27, 112);
-                        left: -25%;
-                        top: -240px;
-                        clip-path: ellipse(100% 15% at -15% 100%);
-                    }
-                }
+           
             }
 
             @media (max-width: 768px) {
