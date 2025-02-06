@@ -1,6 +1,5 @@
 // components/ClientTypes/ClientTypes.tsx
 import styles from './ClientTypes.module.scss';
-// import Divider from "../../assets/div.herocircle__waves-wrapper.svg"
 
 export const ClientTypes = () => (
   <section className={styles.clientTypes}>
@@ -8,9 +7,12 @@ export const ClientTypes = () => (
     <h2>We deal with clients of any size and industry</h2>
     
     <div className={styles.columns}>
+      <div className={styles.firstColumn}>
       <div className={styles.column}>
         <h3>Individuals & Startups</h3>
         <p>We use technology, smart electronics, logistics, and mobile devices to create a wide range of services...</p>
+      </div>
+
       </div>
       
       <div className={styles.column}>

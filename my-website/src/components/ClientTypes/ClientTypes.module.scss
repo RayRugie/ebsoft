@@ -4,18 +4,19 @@
   
     h2 {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 3rem;  
+      font-weight: 600;
     }
   
     .columns {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      // grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
     }
   
     .column {
       padding: 2rem;
-      border: 1px solid #eee;
+      // bor  der: 1px solid #eee;
       border-radius: 8px;
   
       h3 {
