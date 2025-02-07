@@ -12,11 +12,12 @@
             color: white;
             font-family: "Inter", serif;
 
-  clip-path: path("M0,0 L100%,0 L100%,80 Q75%,100 50%,80 Q25%,60 0,80 Z");
-              &::before,
+            clip-path: path("M0,0 L100%,0 L100%,80 Q75%,100 50%,80 Q25%,60 0,80 Z");
+
+            &::before,
             &::after {
                 content: "";
-                
+
                 position: absolute;
                 top: 0;
                 width: 20vw; // Adjust width based on design reference
@@ -43,6 +44,7 @@
                 position: relative;
                 background: transparent;
             }
+
             .content:before {
                 content: "";
                 height: 125px;
@@ -52,43 +54,47 @@
                 -moz-background-size: 1600px 198px;
                 -o-background-size: 1600px 198px;
                 background-size: 1600px 198px;
-              
+
                 position: absolute;
                 left: 0;
                 bottom: 0;
-              
+
                 -webkit-filter: drop-shadow(5px -10px 3px rgba(0, 0, 0, .2));
                 -webkit-filter: drop-shadow(5px -10px 3px rgba(4, 228, 90, 0.2));
                 filter: drop-shadow(5px -10px 3px rgba(0, 0, 0, .2));
                 filter: drop-shadow(5px -10px 3px rgba(4, 228, 90, 0.2));
-              
+
                 -webkit-animation: an-wave 20s linear infinite;
                 -moz-animation: an-wave 20s linear infinite;
                 -o-animation: an-wave 20s linear infinite;
                 animation: an-wave 20s linear infinite;
             }
+
             .svg-img-block {
                 display: none;
             }
-            
+
             @-webkit-keyframes an-wave {
                 100% {
-                background-position-x: -1600px;
+                    background-position-x: -1600px;
                 }
             }
+
             @-moz-keyframes an-wave {
                 100% {
-                background-position-x: -1600px;
+                    background-position-x: -1600px;
                 }
             }
+
             @-o-keyframes an-wave {
                 100% {
-                background-position-x: -1600px;
+                    background-position-x: -1600px;
                 }
             }
+
             @keyframes an-wave {
                 100% {
-                background-position-x: -1600px;
+                    background-position-x: -1600px;
                 }
             }
 
@@ -203,29 +209,30 @@
                         // margin-bottom: 20%;
                         position: absolute;
                         top: 20%;
-                        left:20%;
-                        
+                        left: 20%;
+
                         // .firstPart {
-                            
+
                         //     // margin-right: 10%;
                         // }
-                        
+
                         .secondPart {
                             padding-left: 3rem;
                         }
                     }
-                    
+
                     .leftTextBreak:hover {
                         color: #2D975A;
                     }
 
                     .leftTextBreak2 {
                         position: absolute;
-                        bottom: 20%;left:20%;
+                        bottom: 20%;
+                        left: 20%;
                         // margin-top: 5%;
                         font-size: 1.2rem;
 
-                        
+
                         // .firstPart {
                         //     // margin-right: 5%;
 
@@ -234,6 +241,7 @@
                             padding-left: 3rem;
                         }
                     }
+
                     .leftTextBreak2:hover {
                         color: #2D975A;
                     }
@@ -251,13 +259,15 @@
 
                     .rightTextBreak {
                         position: absolute;
-                        top: 20%;right:18%;
+                        top: 20%;
+                        right: 18%;
 
                         p:nth-child(1) {
                             padding-left: 7rem;
                         }
 
                     }
+
                     .rightTextBreak:hover {
                         color: #2D975A;
                     }
@@ -265,11 +275,13 @@
                     .rightTextBreak2 {
                         position: absolute;
                         bottom: 20%;
-                        right:18%;
+                        right: 18%;
+
                         span:nth-child(1) {
                             padding-left: 5rem;
                         }
                     }
+
                     .rightTextBreak2:hover {
                         color: #2D975A;
                     }
@@ -297,11 +309,13 @@
             //     transform: translateY(-5px);
             // }
             // }
-
+.hiringButtonContainer{
+    padding-bottom: 13rem;
             .hiringButton {
                 display: block;
-                margin: 2rem auto 0;
-                padding: 1rem 2.5rem;
+                margin: 0 auto 0;
+                // padding: 1rem 2.5rem;
+                // padding-bottom: 9rem;
                 background: transparent;
                 border: none;
                 border-radius: 50px;
@@ -310,7 +324,7 @@
                 cursor: pointer;
                 color: white;
                 transition: all 0.3s ease;
-               
+
 
 
                 &:hover {
@@ -318,9 +332,9 @@
                     color: white;
                 }
 
-           
-            }
 
+            }
+        }
             @media (max-width: 768px) {
                 .mainHeading {
                     font-size: 2rem;

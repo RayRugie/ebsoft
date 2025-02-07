@@ -75,9 +75,12 @@ export const Hero = () => (
         </div>
 
       </div>
-        <button className={styles.hiringButton}>
+      <div className={styles.hiringButtonContainer}>
+ <button className={styles.hiringButton}>
           We are hiring
         </button>
+      </div>
+       
 
     </div>
     {/* <div className="wave"></div> */}
